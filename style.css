@@ -1,0 +1,178 @@
+/* Universal selector */
+
+*{
+    padding: .4rem;
+}
+
+/* Document body */
+
+body{
+    width: 90%;
+    height: 110vh;
+    background:  linear-gradient(rgba(33, 32, 34, 0.6),rgba(124, 119, 122, 0.6)),url(BACKGROUND-ICON/pexels-sebastiaan-stam-1480690.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* Project title styling */
+
+.title{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: myFont;
+    font-size: 1rem;
+    color:white;
+    gap: 1rem;
+    
+}
+
+/* Font source */
+
+@font-face {
+    font-family: myFont;
+    src: url(FONT-STYLE/Product-Sans-Bold.ttf);
+}
+
+/* Instructions styling */
+
+.user-interaction{
+    position: relative;
+    bottom: 6rem;
+}
+
+/* Score board styling */
+
+.score-board-container{
+    border: 8px solid skyblue;
+    padding: 2rem 2rem;
+
+}
+
+.score-board-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: .1px;
+
+}
+
+/* Button styling */
+
+button{
+    border-radius: .5rem;
+    border:2px solid rgb(33, 123, 168);
+    cursor: pointer;
+}
+
+.btn{
+    cursor: pointer;
+    background:white;
+}
+
+.button-container img{
+    width: 2rem;
+    height: 2rem;
+    
+}
+
+.opponents-choices{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Item styling */
+
+.user-description{
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+    gap: 9rem;
+    position: relative;
+    top:-3rem; 
+    left:2%;
+}
+
+
+.opponents-choices-wrapper img{
+    gap: 2.7rem;
+    width: 5rem;
+    height: 5rem;
+    color: transparent;
+}
+.user-answer, .computer-answer{
+    margin: 1rem 1rem;
+
+    padding: 1rem 1rem;
+    
+}
+.Result-display{
+    font-size: 1rem;
+}
+
+.olex{
+    color: transparent;
+    background: transparent;
+}
+
+/* Remove winner or loser text */
+
+.winning-display{
+    position: absolute;
+    top: 1rem;
+    left: 10rem;
+    opacity:0;
+}
+
+/* Display winner or loser text */
+
+.losing-display{
+   
+    opacity: 0;
+}
+
+.winning-display.active{
+    opacity: 1;
+}
+
+.losing-display.active{
+    opacity: 1;
+}
+
+/* Media queries*/
+
+@media screen and (max-width:1132px){
+    .score-board-wrapper{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width:780px){
+    .opponents-choices-wrapper img{
+        gap: 3rem;
+        width: 2.2rem;
+        height: 2.2rem;
+        color: transparent;
+    }
+    .score-board-wrapper{
+        font-size: 1rem;
+    }
+  
+
+}
+
+@media screen and (max-width:608px) {
+    .opponents-choices-wrapper img{
+        gap: 3rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        color: transparent;
+    }
+
+
+    
+}
